@@ -22,3 +22,5 @@ export default {
 @import 'src/scss/Header.scss';
 @import 'src/scss/MovieList.scss';
 </style>
+
+
