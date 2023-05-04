@@ -1,11 +1,7 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import { createStore } from 'vuex';
 import axios from 'axios';
 
-
-Vue.use(Vuex);
-
-export default new Vuex.Store({
+const store = createStore({
   state: {
     searchQuery: '',
     movies: [],
@@ -41,3 +37,5 @@ export default new Vuex.Store({
     movies: (state) => state.movies,
   },
 });
+
+export default store;
