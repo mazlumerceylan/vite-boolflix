@@ -12,6 +12,8 @@ img {
   width: 200px;
   cursor: pointer;
 }
+
+
 .search-container {
   display: flex;
 }
@@ -20,7 +22,7 @@ input {
   font-size: 1rem;
 }
 button {
-  background-color: #4CAF50;
+  background-color: red;
   border: none;
   color: white;
   padding: 0.5rem;
