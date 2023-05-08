@@ -18,9 +18,10 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 @import 'src/scss/Header.scss';
 @import 'src/scss/MovieList.scss';
+
+
 </style>
 
 
