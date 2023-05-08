@@ -1,7 +1,9 @@
 <template>
   <div class="movie-list">
-    <div v-for="movie in movies" :key="movie.id" class="movie-item">
-      <div class="movie-poster">
+    <div v-if="movies.length === 0" class="no-results">
+      Nessun risultato trovato
+    </div>
+    <div v-else v-for="movie in movies" :key="movie.id" class="movie-item">      <div class="movie-poster">
         <img class="movie-poster" :src="getMoviePoster(movie.poster_path)" :alt="movie.title" />
       </div>
       <div class="movie-details">

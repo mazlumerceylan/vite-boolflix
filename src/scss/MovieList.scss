@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1rem;
-  padding: 1rem;
+  padding: 10rem;
 }
 
 .movie-item {
@@ -50,4 +50,15 @@ p {
 
 p {
   margin-top: 0.5rem;
+}
+
+
+.no-results {
+  color: white;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
 }
