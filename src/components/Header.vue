@@ -22,7 +22,7 @@ export default {
   methods: {
     search() {
       this.$store.commit('setSearchQuery', this.searchInput);
-      this.$store.dispatch('searchMovies');
+      this.$store.dispatch('searchContent');
     },
   },
 };

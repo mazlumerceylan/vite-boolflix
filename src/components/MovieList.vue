@@ -5,8 +5,8 @@
         <img class="movie-poster" :src="getMoviePoster(movie.poster_path)" :alt="movie.title" />
       </div>
       <div class="movie-details">
-        <h3>{{ movie.title }}</h3>
-        <p><strong>Titolo Originale:  </strong> {{ movie.original_title }}</p>
+        <h3>{{ movie.title || movie.name }}</h3>
+        <p><strong>Titolo Originale:</strong> {{ movie.original_title || movie.original_name }}</p>
         <p>
           <strong>Lingua:   </strong>
           <span v-if="movie.original_language === 'it'">
@@ -18,8 +18,7 @@
           <span v-else>
             {{ movie.original_language }}
           </span>
-        </p>
-        <p>
+        </p>        <p>
           <strong>Voto:</strong>
           <span class="rating">
             <template v-for="i in 5">
@@ -28,6 +27,7 @@
             </template>
           </span>
         </p> 
+        <p><strong>Data di rilascio:</strong> {{ movie.release_date || movie.first_air_date }}</p>
         <p>{{ movie.overview }}</p>
       </div>
     </div>

@@ -15,9 +15,10 @@ const store = createStore({
     },
   },
   actions: {
-    async searchMovies({ commit, state }) {
+    async searchContent({ commit, state }) {
       try {
-        const response = await axios.get(
+        // Ricerca film
+        const movieResponse = await axios.get(
           'https://api.themoviedb.org/3/search/movie',
           {
             params: {
@@ -27,9 +28,26 @@ const store = createStore({
             },
           }
         );
-        commit('setMovies', response.data.results);
+        // Ricerca serie TV
+      const tvResponse = await axios.get(
+        'https://api.themoviedb.org/3/search/tv',
+        {
+          params: {
+            api_key: 'e7ef597fab4f79bd04c0d1792de66f20',
+            query: state.searchQuery,
+            language: 'it-IT',
+          },
+        }
+      );
+      // Combina i risultati dei film e delle serie TV
+      const combinedResults = [
+        ...movieResponse.data.results,
+        ...tvResponse.data.results,
+      ];
+     
+        commit('setMovies', combinedResults);
       } catch (error) {
-        console.error('Error fetching movies:', error);
+        console.error('Error fetching content:', error);
       }
     },
   },
