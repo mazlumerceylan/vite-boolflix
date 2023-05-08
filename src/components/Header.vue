@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div class="logo">Logo</div>
+    <div class="logo"><img src="src/assets/images/logo/logo-boolflix.png" alt="LOGO"></div>
     <div class="search-container">
       <input
         type="text"
@@ -31,5 +31,5 @@ export default {
 
 <style lang="scss" scoped>
 
-
+@import 'src/scss/Header.scss';
 </style>
