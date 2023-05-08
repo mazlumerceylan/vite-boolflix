@@ -1,7 +1,29 @@
-# Vue 3 + Vite
+Boolflix
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Boolflix è un'applicazione web che permette di cercare informazioni su film e serie TV. L'applicazione utilizza l'API di The Movie DB per ottenere le informazioni sui film e le serie TV.
 
-## Recommended IDE Setup
+===========
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Caratteristiche
+
+L'applicazione consente di:
+
+cercare i film e le serie TV per titolo
+visualizzare le informazioni dettagliate dei film e delle serie TV, inclusi il titolo originale, la lingua, il voto medio e la trama
+
+===========
+
+Tecnologie utilizzate
+
+Vue.js
+Vite.js
+Sass
+
+===========
+
+Utilizzo
+
+L'applicazione si apre sulla pagina di ricerca. Per cercare un film o una serie TV, inserire il titolo nella casella di ricerca e premere il pulsante "Cerca". I risultati verranno visualizzati di seguito. 
+
+Per visualizzare le informazioni dettagliate su un film o una serie TV, passare con il mouse sulla scheda corrispondente nei risultati della ricerca. Qui sarà possibile visualizzare il titolo originale, la lingua, il voto medio e la trama.
+
