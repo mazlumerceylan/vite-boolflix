@@ -14,6 +14,11 @@ export default {
     Header,
     MovieList,
   },
+  created() {
+    this.$store.dispatch('fetchPopularMovies');
+    // this.$store.dispatch('fetchPopularTVShows'); // Abilita questa riga se vuoi mostrare le serie TV più popolari invece dei film più popolari
+  },
+
 };
 </script>
 

@@ -15,6 +15,38 @@ const store = createStore({
     },
   },
   actions: {
+    async fetchPopularMovies({ commit }) {
+      try {
+        const response = await axios.get(
+          'https://api.themoviedb.org/3/movie/popular',
+          {
+            params: {
+              api_key: 'e7ef597fab4f79bd04c0d1792de66f20',
+              language: 'it-IT',
+            },
+          }
+        );
+        commit('setMovies', response.data.results);
+      } catch (error) {
+        console.error('Error fetching popular movies:', error);
+      }
+    },
+    async fetchPopularTVShows({ commit }) {
+      try {
+        const response = await axios.get(
+          'https://api.themoviedb.org/3/tv/popular',
+          {
+            params: {
+              api_key: 'e7ef597fab4f79bd04c0d1792de66f20',
+              language: 'it-IT',
+            },
+          }
+        );
+        commit('setMovies', response.data.results);
+      } catch (error) {
+        console.error('Error fetching popular TV shows:', error);
+      }
+    },
     async searchContent({ commit, state }) {
       try {
         // Ricerca film
