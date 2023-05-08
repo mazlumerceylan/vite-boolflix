@@ -1,6 +1,8 @@
 <template>
   <header>
-    <div class="logo"><img src="src/assets/images/logo/logo-boolflix.png" alt="LOGO"></div>
+    <div class="logo" @click="reloadPage">
+      <img src="src/assets/images/logo/logo-boolflix.png" alt="LOGO" />
+    </div>
     <div class="search-container">
       <input
         type="text"
@@ -23,6 +25,9 @@ export default {
     search() {
       this.$store.commit('setSearchQuery', this.searchInput);
       this.$store.dispatch('searchContent');
+    },
+    reloadPage() {
+      window.location.reload();
     },
   },
 };
